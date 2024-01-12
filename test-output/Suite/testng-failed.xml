@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="chromeTest(failed)">
+    <parameter name="Browser" value="Chrome"/>
+    <classes>
+      <class name="test.ProductSearchTest">
+        <methods>
+          <include name="VerifyIfUserProductsAreDisplayedInalidSearch"/>
+          <include name="publishReports"/>
+          <include name="openApplication"/>
+          <include name="addTestStatus"/>
+        </methods>
+      </class> <!-- test.ProductSearchTest -->
+      <class name="test.VerifyShoppingCategoryTest">
+        <methods>
+          <include name="verifyIfUserAbleTOAccessShoppingCategories"/>
+          <include name="publishReports"/>
+          <include name="openApplication"/>
+          <include name="addTestStatus"/>
+        </methods>
+      </class> <!-- test.VerifyShoppingCategoryTest -->
+      <class name="test.ProductDescriptionTest">
+        <methods>
+          <include name="publishReports"/>
+        </methods>
+      </class> <!-- test.ProductDescriptionTest -->
+      <class name="test.AddToCartTest">
+        <methods>
+          <include name="VerifyIfUserIsAbleToRemoveProdutFromCart"/>
+          <include name="openApplication"/>
+          <include name="verifyIfUserIsAbleToAddMultipleProdutToCartUsingQuickViewOption"/>
+        </methods>
+      </class> <!-- test.AddToCartTest -->
+    </classes>
+  </test> <!-- chromeTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
