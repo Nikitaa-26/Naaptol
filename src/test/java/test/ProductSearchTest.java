@@ -20,10 +20,12 @@ import pom.NaaptolHomePage;
 import pom.ProductResultPage;
 @Listeners(test.Listeners.class)
 public class ProductSearchTest extends BaseTest{
-	ExtentReports extentReport;
-	ExtentTest Test;
-	
-//	@Parameters ({"Browser"})
+//	ExtentReports extentReport;
+//	ExtentTest Test;
+	NaaptolHomePage naaptolHomePage;
+	ProductResultPage productResultPage;
+
+//	 @Parameters ({"Browser"})
 //	 @BeforeTest
 //	 public void openApplication(String browser) {
 //		driver =  LaunchBrowser.browser(browser);
@@ -37,50 +39,51 @@ public class ProductSearchTest extends BaseTest{
 	 @Test(priority=1)
 	 public void VerifyIfProductsAreDisplayedValidSearch() {
 		// Test=extentReport.createTest("VerifyIfUserProductsAreDisplayedValidSearch");
-		 NaaptolHomePage naaptolHomePage = new NaaptolHomePage(driver);
+		 naaptolHomePage = new NaaptolHomePage(driver);
 		 naaptolHomePage.enterSearchTab("mobiles"); // mobiles
 		 naaptolHomePage.ClickOnSearch();
 		 String url = driver.getCurrentUrl();
+		 System.out.println("url:"+ url);
 		 Assert.assertTrue(url.contains("mobiles"));
-		 ProductResultPage productResultPage = new ProductResultPage(driver);
-	//	 Assert.assertTrue(productResultPage.getNumberOfproducts()>0);
+		 productResultPage = new ProductResultPage(driver);
+		 Assert.assertTrue(productResultPage.getNumberOfproducts()>0);
 	 }
 	 
 	 @Test(priority = 2)
 	 public void VerifyIfNoProductsAreDisplayedInalidSearch() {
 		// Test=extentReport.createTest("VerifyIfUserProductsAreDisplayedInalidSearch");
-		 NaaptolHomePage naaptolHomePage = new NaaptolHomePage(driver);
+		 naaptolHomePage = new NaaptolHomePage(driver);
 		 naaptolHomePage.enterSearchTab("iphone");
 		 naaptolHomePage.ClickOnSearch();
 		 String url = driver.getCurrentUrl();
+		 System.out.println("url:"+ url);
 		 Assert.assertTrue(url.contains("iphone"));
-		 ProductResultPage productResultPage = new ProductResultPage(driver);
-		// Assert.assertTrue(productResultPage.getNumberOfproducts()==0);		 
-		 
+		 productResultPage = new ProductResultPage(driver);
+		 Assert.assertTrue(productResultPage.getNumberOfproducts()==0);		 		 
 	 }
 	
 	 
-	 @AfterMethod
-		public void addTestStatus(ITestResult result) {
-			
-			if(result.getStatus()==ITestResult.SUCCESS) {
-				
-				Test.log(Status.PASS, result.getName());
-			}
-			else if(result.getStatus()==ITestResult.FAILURE) {
-				
-				Test.log(Status.FAIL, result.getName());
-			}
-			else if(result.getStatus()==ITestResult.SKIP) {
-				
-				Test.log(Status.SKIP, result.getName());
-			}
-	    
-		}
-		
-		 @AfterTest
-	     public void publishReports() {
-
-	    	 extentReport.flush();
-	        }
+//	 @AfterMethod
+//		public void addTestStatus(ITestResult result) {
+//			
+//			if(result.getStatus()==ITestResult.SUCCESS) {
+//				
+//				Test.log(Status.PASS, result.getName());
+//			}
+//			else if(result.getStatus()==ITestResult.FAILURE) {
+//				
+//				Test.log(Status.FAIL, result.getName());
+//			}
+//			else if(result.getStatus()==ITestResult.SKIP) {
+//				
+//				Test.log(Status.SKIP, result.getName());
+//			}
+//	    
+//		}
+//		
+//		 @AfterTest
+//	     public void publishReports() {
+//
+//	    	 extentReport.flush();
+//	        }
 }

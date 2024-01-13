@@ -1,5 +1,7 @@
 package test;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -20,9 +22,10 @@ import pojo.LaunchBrowser1;
 import pom.NaaptolHomePage;
 @Listeners(test.Listeners.class)
 public class VerifyShoppingCategoryTest extends BaseTest{
-	ExtentReports extentReport;
-	ExtentTest Test;
-	
+//	ExtentReports extentReport;
+//	ExtentTest Test;
+//	NaaptolHomePage naaptolHomePage;
+
 //	@Parameters ({"Browser"})
 //	@BeforeTest
 //	public void openApplication(String browser) {
@@ -35,37 +38,38 @@ public class VerifyShoppingCategoryTest extends BaseTest{
 	}
 	
 	@Test
-	  public void verifyIfUserAbleTOAccessShoppingCategories(WebDriver driver) {
-	   Test=extentReport.createTest("verifyIfUserAbleTOAccessShoppingCategories");
-	   NaaptolHomePage naaptolHomePage = new NaaptolHomePage(driver);
-	   naaptolHomePage.clickOnShoppingCategory();
-	   naaptolHomePage.selectShoppingCategory(driver, 3);
-	   String currentTitle = driver.getTitle();
+	  public void verifyIfUserAbleToAccessShoppingCategories(WebDriver driver) {
+	//   Test=extentReport.createTest("verifyIfUserAbleTOAccessShoppingCategories");
+		 NaaptolHomePage naaptolHomePage = new NaaptolHomePage(driver);
+		 naaptolHomePage.clickOnShoppingCategory();
+		 naaptolHomePage.selectShoppingCategory(driver, 3);
+		 naaptolHomePage.getCategoryHeading();
+		 String currentTitle = driver.getTitle();
     //   Assert.assertTrue(currentTitle.contains("Mobile Handset"));
-     //  Assert.assertEquals(categoryHeading.getText(),"Mobiles : Mobile Handsets");	  
-      }
-	
-	@AfterMethod
-	public void addTestStatus(ITestResult result) {
-		
-		if(result.getStatus()==ITestResult.SUCCESS) {
-			
-			Test.log(Status.PASS, result.getName());
-		}
-		else if(result.getStatus()==ITestResult.FAILURE) {
-			
-			Test.log(Status.FAIL, result.getName());
-		}
-		else if(result.getStatus()==ITestResult.SKIP) {
-			
-			Test.log(Status.SKIP, result.getName());
-		}
-    
+    //   Assert.assertEquals(naaptolHomePage.getCategoryHeading(),"Mobiles : Mobile Handsets");	  
 	}
 	
-	 @AfterTest
-     public void publishReports() {
-
-    	 extentReport.flush();
-        }
+//	@AfterMethod
+//	public void addTestStatus(ITestResult result) {
+//		
+//		if(result.getStatus()==ITestResult.SUCCESS) {
+//			
+//			Test.log(Status.PASS, result.getName());
+//		}
+//		else if(result.getStatus()==ITestResult.FAILURE) {
+//			
+//			Test.log(Status.FAIL, result.getName());
+//		}
+//		else if(result.getStatus()==ITestResult.SKIP) {
+//			
+//			Test.log(Status.SKIP, result.getName());
+//		}
+//    
+//	}
+//	
+//	 @AfterTest
+//     public void publishReports() {
+//
+//    	 extentReport.flush();
+//        }
 }
