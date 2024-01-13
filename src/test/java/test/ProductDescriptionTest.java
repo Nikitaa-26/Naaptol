@@ -24,6 +24,9 @@ import pom.ProductResultPage;
 public class ProductDescriptionTest extends BaseTest{
 	ExtentReports extentReport;
 	ExtentTest Test;
+	NaaptolHomePage naaptolHomePage;
+	ProductResultPage productResultPage;
+	AddProductFromDescriptionPage addProductFromDescriptionPage;
 	
 	@Parameters ({"Browser"})
      @BeforeMethod
@@ -34,16 +37,16 @@ public class ProductDescriptionTest extends BaseTest{
      @Test
      public void VerifyIfUserIsAbleToAddProductToCartFromProductDescriptionPage() {
     //	 Test=extentReport.createTest("VerifyIfUserIsAbleToAddProductToCartFromProductDescriptionPage");
-    	 NaaptolHomePage naaptolHomePage = new NaaptolHomePage(driver);
+    	 naaptolHomePage = new NaaptolHomePage(driver);
     	 naaptolHomePage.enterSearchTab("laptop");
     	 naaptolHomePage.ClickOnSearch();
     	 
-    	 ProductResultPage productResultPage =new ProductResultPage(driver);    	
+    	 productResultPage =new ProductResultPage(driver);    	
     	 String productTitle = productResultPage.getProductTitle(1);
     	 productResultPage.clickOnProducts(1);
     	 productResultPage.switchToPage(driver,"productTitle");
     	
-    	 AddProductFromDescriptionPage addProductFromDescriptionPage = new AddProductFromDescriptionPage(driver);	 
+    	 addProductFromDescriptionPage = new AddProductFromDescriptionPage(driver);	 
     	 addProductFromDescriptionPage.clickOnBuyButton();	
      }
      

@@ -46,8 +46,7 @@ public class NaaptolHomePage {
     }
     public void enterSearchTab(String product) {
     		searchTab.sendKeys(product);
-    }
-    
+    }   
     public void ClickOnSearch() {
     	search.click();
     }

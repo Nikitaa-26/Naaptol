@@ -5,8 +5,8 @@
     <classes>
       <class name="test.AddToCartByQuickViewTest">
         <methods>
+          <include name="VerifyIfProductsDetailsAndQuickViewDescriptionAreSimilar"/>
           <include name="openApplication"/>
-          <include name="verifyIfUserIsAbleToAddProdutToCartUsingQuickViewOption"/>
         </methods>
       </class> <!-- test.AddToCartByQuickViewTest -->
     </classes>

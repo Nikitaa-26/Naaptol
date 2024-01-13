@@ -13,8 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ProductResultPage extends BasePage{
 
-		@FindBy (xpath= "//div[@class='grid_Square ']")private List<WebElement> products;
-		@FindBy (xpath= "//a[@class='bt_compare icon chat quickFancyBox']")private List<WebElement>quickView;
+		@FindBy (xpath = "//div[@class='grid_Square ']")private List<WebElement> products;
+		@FindBy (xpath = "//a[@class='bt_compare icon chat quickFancyBox']")private List<WebElement>quickView;
 	    @FindBy (xpath = "//div[@class='item_title']")private List<WebElement> productTitle;
 	   
 	    public ProductResultPage(WebDriver driver) {
@@ -23,11 +23,12 @@ public class ProductResultPage extends BasePage{
 	    public int getNumberOfproducts() {
 		    return products.size();
 	    }	     
-	    public void clickOnQuickView(WebDriver driver,int product) {	
+	    public void clickOnQuickView(WebDriver driver,int product)   {	
 			Actions actions=new Actions(driver);
 			actions.moveToElement(products.get(product));
 			actions.perform();
 			quickView.get(product).click();
+		
 	    }	    
 	    public void clickOnProducts(int product) {
 			products.get(product).click();
