@@ -1,8 +1,9 @@
 package test;
 
-import static org.testng.Assert.assertEquals;
+
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -15,7 +16,7 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.util.Assert;
+
 
 import pojo.LaunchBrowser;
 import pojo.LaunchBrowser1;
@@ -45,8 +46,10 @@ public class VerifyShoppingCategoryTest extends BaseTest{
 		 naaptolHomePage.selectShoppingCategory(driver, 3);
 		 naaptolHomePage.getCategoryHeading();
 		 String currentTitle = driver.getTitle();
-    //   Assert.assertTrue(currentTitle.contains("Mobile Handset"));
-    //   Assert.assertEquals(naaptolHomePage.getCategoryHeading(),"Mobiles : Mobile Handsets");	  
+
+//       Assert.assertEquals(naaptolHomePage.getCategoryHeading(),"Mobiles : Mobile Handsets");	  
+         Assert.assertTrue(currentTitle.contains("Mobile Handset"));
+	     
 	}
 	
 //	@AfterMethod

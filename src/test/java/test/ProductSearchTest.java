@@ -38,7 +38,7 @@ public class ProductSearchTest extends BaseTest{
 	 
 	 @Test(priority=1)
 	 public void VerifyIfProductsAreDisplayedValidSearch() {
-		// Test=extentReport.createTest("VerifyIfUserProductsAreDisplayedValidSearch");
+	  // Test=extentReport.createTest("VerifyIfUserProductsAreDisplayedValidSearch");
 		 naaptolHomePage = new NaaptolHomePage(driver);
 		 naaptolHomePage.enterSearchTab("mobiles"); // mobiles
 		 naaptolHomePage.ClickOnSearch();
@@ -51,7 +51,7 @@ public class ProductSearchTest extends BaseTest{
 	 
 	 @Test(priority = 2)
 	 public void VerifyIfNoProductsAreDisplayedInalidSearch() {
-		// Test=extentReport.createTest("VerifyIfUserProductsAreDisplayedInalidSearch");
+	  // Test=extentReport.createTest("VerifyIfUserProductsAreDisplayedInalidSearch");
 		 naaptolHomePage = new NaaptolHomePage(driver);
 		 naaptolHomePage.enterSearchTab("iphone");
 		 naaptolHomePage.ClickOnSearch();

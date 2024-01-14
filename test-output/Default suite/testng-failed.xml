@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.AddToCartByQuickViewTest">
+      <class name="test.VerifyDetailsTest">
         <methods>
-          <include name="VerifyIfProductsDetailsAndQuickViewDescriptionAreSimilar"/>
+          <include name="AddTwoToCartAndVerifyIfUnitPriceAndShipingPriceIsEqualToOrderAmountAndAlsoVerifyIfSumOfOrderAmountIsEqualToCartAmount"/>
           <include name="openApplication"/>
         </methods>
-      </class> <!-- test.AddToCartByQuickViewTest -->
+      </class> <!-- test.VerifyDetailsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

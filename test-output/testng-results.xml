@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-13T18:45:25 IST" name="Default suite" finished-at="2024-01-13T18:45:32 IST" duration-ms="7198">
+  <suite started-at="2024-01-14T19:25:18 IST" name="Default suite" finished-at="2024-01-14T19:25:42 IST" duration-ms="24416">
     <groups>
     </groups>
-    <test started-at="2024-01-13T18:45:25 IST" name="Default test" finished-at="2024-01-13T18:45:32 IST" duration-ms="7198">
-      <class name="test.AddToCartByQuickViewTest">
-        <test-method is-config="true" signature="openApplication()[pri:0, instance:test.AddToCartByQuickViewTest@49e53c76]" started-at="2024-01-13T18:45:25 IST" name="openApplication" finished-at="2024-01-13T18:45:30 IST" duration-ms="4844" status="PASS">
+    <test started-at="2024-01-14T19:25:18 IST" name="Default test" finished-at="2024-01-14T19:25:42 IST" duration-ms="24416">
+      <class name="test.VerifyDetailsTest">
+        <test-method is-config="true" signature="openApplication()[pri:0, instance:test.VerifyDetailsTest@74f0ea28]" started-at="2024-01-14T19:25:18 IST" name="openApplication" finished-at="2024-01-14T19:25:36 IST" duration-ms="17573" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method signature="VerifyIfProductsDetailsAndQuickViewDescriptionAreSimilar()[pri:0, instance:test.AddToCartByQuickViewTest@49e53c76]" started-at="2024-01-13T18:45:30 IST" name="VerifyIfProductsDetailsAndQuickViewDescriptionAreSimilar" finished-at="2024-01-13T18:45:32 IST" duration-ms="2287" status="PASS">
+        <test-method signature="AddTwoToCartAndVerifyIfUnitPriceAndShipingPriceIsEqualToOrderAmountAndAlsoVerifyIfSumOfOrderAmountIsEqualToCartAmount()[pri:0, instance:test.VerifyDetailsTest@74f0ea28]" started-at="2024-01-14T19:25:36 IST" name="AddTwoToCartAndVerifyIfUnitPriceAndShipingPriceIsEqualToOrderAmountAndAlsoVerifyIfSumOfOrderAmountIsEqualToCartAmount" finished-at="2024-01-14T19:25:42 IST" duration-ms="6775" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyIfProductsDetailsAndQuickViewDescriptionAreSimilar -->
-      </class> <!-- test.AddToCartByQuickViewTest -->
+        </test-method> <!-- AddTwoToCartAndVerifyIfUnitPriceAndShipingPriceIsEqualToOrderAmountAndAlsoVerifyIfSumOfOrderAmountIsEqualToCartAmount -->
+      </class> <!-- test.VerifyDetailsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
