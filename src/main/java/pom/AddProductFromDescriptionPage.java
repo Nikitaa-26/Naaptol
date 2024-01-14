@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AddProductFromDescriptionPage extends BasePage {
+public class AddProductFromDescriptionPage{
 
      @FindBy (xpath = "//a[@class='red_button icon chat']")private WebElement buy;
    

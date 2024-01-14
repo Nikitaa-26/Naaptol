@@ -52,5 +52,7 @@ public class CartPage {
   }
   public Double getCartAmount(int index) {
 	  return Double.parseDouble(cartAmount.getText().substring(3));
+//	  String a=cartAmount.getText().substring(3).replace(",", "");
+//		return Double.parseDouble(a);
   }
 }

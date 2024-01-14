@@ -27,29 +27,14 @@ public class ProductResultPage extends BasePage{
 			Actions actions=new Actions(driver);
 			actions.moveToElement(products.get(product));
 			actions.perform();
-			quickView.get(product).click();
-		
+			quickView.get(product).click();		
 	    }	    
 	    public void clickOnProducts(int product) {
 			products.get(product).click();
-        }
-	
+        }	
 	    public String getProductTitle(int product) {
 	    	return productTitle.get(product).getText();
-        }
-//	    public String getProductHeading() {
-//			return productHeading.getText();
-//		}
-//	    
-//	    public void checkTheTitlesAreEqual() {
-//	    	if(productTitle.contains(productHeading))
-//			{
-//				System.out.println("Titles are equal");
-//			}
-//	    	else
-//	    	{
-//	    		System.out.println("Titles are not equal");
-//	    	}
+        }	 
  }
 
 
