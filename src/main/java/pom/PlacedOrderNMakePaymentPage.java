@@ -109,7 +109,7 @@ public class PlacedOrderNMakePaymentPage {
     	 city.selectByVisibleText("JALGAON");
      }
      public void enterMobileNo(WebDriver driver,String number) throws InterruptedException {
-         Thread.sleep(5000);
+         Thread.sleep(4000);
     //	 WebDriverWait wait = new WebDriverWait(driver,Duration.ofMillis(5000));
     //	 wait.until(ExpectedConditions.visibilityOf(mobileNo ));
     	 mobileNo.sendKeys(number);

@@ -8,7 +8,7 @@ import pom.PlacedOrderNMakePaymentPage;
 
 public class PaymentTest extends BaseTest{
 
-	PlacedOrderNMakePaymentPage makePaymentTest;
+	PlacedOrderNMakePaymentPage PaymentPage;
 //	ExtentReports extentReport;
 //	ExtentTest Test;	 
 
@@ -26,26 +26,26 @@ public class PaymentTest extends BaseTest{
 	@Test
 	public void placeOrder() throws InterruptedException {
 	//   Test=extentReport.createTest("placeOrder");
-		 makePaymentTest = new PlacedOrderNMakePaymentPage(driver);
-	     makePaymentTest.clickOnLogInButton();
-	     makePaymentTest.enterMobileNoForOtp("8484982590");
-	     makePaymentTest.clickOnContinueButton(); 
-	     makePaymentTest.clickOnOtpSubmitButton();      
-	     makePaymentTest.enterIntoSearchTab("mobile");
-	     makePaymentTest.clickOnSearch();
-	     makePaymentTest.clickOnQuickView(driver, 0);
-	     makePaymentTest.clickOnBuyButton();
-	     makePaymentTest.clickProceedToChcekout();
-	     makePaymentTest.selectTitle();
-	     makePaymentTest.enterFirstName("Nikita");
-	     makePaymentTest.enterLastName("Patil");
-	     makePaymentTest.enterAddress("Dadawadi Jalgaon");
-	     makePaymentTest.enterLandMark("Jain Temple");
-	     makePaymentTest.enterPincode("425001");
-	     makePaymentTest.selectSate("Maharashtra");
-	     makePaymentTest.selectCity("JALGAON");
-	     makePaymentTest.enterMobileNo(driver,"8484982590");
-	     makePaymentTest.clickOnShipToThisAddress();
+		 PaymentPage = new PlacedOrderNMakePaymentPage(driver);
+		 PaymentPage.clickOnLogInButton();
+		 PaymentPage.enterMobileNoForOtp("8484982590");
+		 PaymentPage.clickOnContinueButton(); 
+		 PaymentPage.clickOnOtpSubmitButton();      
+		 PaymentPage.enterIntoSearchTab("mobile");
+		 PaymentPage.clickOnSearch();
+		 PaymentPage.clickOnQuickView(driver, 0);
+		 PaymentPage.clickOnBuyButton();
+		 PaymentPage.clickProceedToChcekout();
+		 PaymentPage.selectTitle();
+		 PaymentPage.enterFirstName("Nikita");
+		 PaymentPage.enterLastName("Patil");
+		 PaymentPage.enterAddress("Dadawadi Jalgaon");
+		 PaymentPage.enterLandMark("Jain Temple");
+		 PaymentPage.enterPincode("425001");
+		 PaymentPage.selectSate("Maharashtra");
+		 PaymentPage.selectCity("JALGAON");
+		 PaymentPage.enterMobileNo(driver,"8484982590");
+		 PaymentPage.clickOnShipToThisAddress();
      
      
 // 	@AfterMethod
