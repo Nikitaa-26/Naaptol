@@ -32,10 +32,10 @@ public class PlacedOrderNMakePaymentPage {
      @FindBy (xpath = "//input[@name='landmark']") private WebElement landMark;
      @FindBy (xpath = "//input[@name='pincode']") private WebElement pinCode;
      @FindBy (xpath = "//select[@id='state']") private WebElement selectState;
-     @FindBy (xpath = "/select[@id='city']") private WebElement selectCity;
+     @FindBy (xpath = "//select[@id='city']") private WebElement selectCity;
      @FindBy (xpath = "//input[@id='mobile']") private WebElement mobileNo;
-     @FindBy (xpath = "//span[text()=' Ship to This Address']") private WebElement address;
-     @FindBy (xpath = "//label[text()='Cash On Delivery']") private WebElement cashOnDelivery;
+     @FindBy (xpath = "//div[@class='shipAddress_Exists']//ul//a//span") private List<WebElement> address;
+     @FindBy (xpath = "//ul[@class='verticalslider_tabs']//li") private List<WebElement> paymentOption;
      @FindBy (xpath = "//a[text()='Click here to Place Order']")  private WebElement placeOrder;
      
      public PlacedOrderNMakePaymentPage(WebDriver driver) {
@@ -109,16 +109,17 @@ public class PlacedOrderNMakePaymentPage {
     	 city.selectByVisibleText("JALGAON");
      }
      public void enterMobileNo(WebDriver driver,String number) throws InterruptedException {
-         Thread.sleep(4000);
+         Thread.sleep(1000);
     //	 WebDriverWait wait = new WebDriverWait(driver,Duration.ofMillis(5000));
     //	 wait.until(ExpectedConditions.visibilityOf(mobileNo ));
     	 mobileNo.sendKeys(number);
      }
-     public void clickOnShipToThisAddress() {
-    	 address.click();
+     public void clickOnShipToThisAddress(int index) throws InterruptedException {
+    	 Thread.sleep(2000);
+    	 address.get(index).click();
      }
-     public void selectCashOnDelivery() {
-    	 cashOnDelivery.click();
+     public void selectPaymentOption(int index) {
+    	 paymentOption.get(index).click();
      }
      public void clickOnPlacedOrder() {
     	 placeOrder.click();
