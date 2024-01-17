@@ -45,7 +45,9 @@ public class PaymentTest extends BaseTest{
 		 PaymentPage.selectSate("Maharashtra");
 		 PaymentPage.selectCity("JALGAON");
 		 PaymentPage.enterMobileNo(driver,"8484982590");
-		 PaymentPage.clickOnShipToThisAddress();
+		 PaymentPage.clickOnShipToThisAddress(0);
+		 PaymentPage.selectPaymentOption(0);
+		 PaymentPage.clickOnPlacedOrder();
      
      
 // 	@AfterMethod
