@@ -22,6 +22,7 @@ public class ProductQuickViewPage {
 	 @FindBy (xpath = "//ul[@id='cartData']//li[4]")private List<WebElement> shippingPrice;
 	 @FindBy (xpath = "//ul[@id='cartData']//li[5]")private List<WebElement> orderAmount;
 	 @FindBy (xpath = "(//ul[@id='cartTotal']//label)[1]") private WebElement totalAmount;
+	 @FindBy (xpath = "//ul[@class='sizeBox clearfix']//li")private List<WebElement> colour;
 	
 	public ProductQuickViewPage(WebDriver driver) {
 		 PageFactory.initElements(driver,this);
@@ -56,8 +57,14 @@ public class ProductQuickViewPage {
 		 return Double.parseDouble(orderAmount.get(index).getText().replace(",",""));
 	 }
 	 public double getTotalAmt() {
-		 return Double.parseDouble(totalAmount.getText().substring(3).replace(",",""));
-	  
+		 return Double.parseDouble(totalAmount.getText().substring(3).replace(",",""));	  
+	 }
+	 public void selectColour(int index) {
+		 if(colour.size()>0)
+		 {
+			 colour.get(index).click();
+		 }
+		
 	 }
 	 
 }
