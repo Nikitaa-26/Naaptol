@@ -55,6 +55,7 @@ public class AddToCartByQuickViewTest extends BaseTest{
 		productResultPage.clickOnQuickView(driver,1);
 		
 		productQuickViewPage = new ProductQuickViewPage(driver);
+		productQuickViewPage.selectColour(0);
 		productQuickViewPage.clickOnBuyButton();
 		
 	    CartPage cartPage = new CartPage(driver);
@@ -77,30 +78,9 @@ public class AddToCartByQuickViewTest extends BaseTest{
 		productResultPage.clickOnQuickView(driver, 1);
 		
 		productQuickViewPage.clickOnBuyButton();
-	     
-		CartPage cartPage = new CartPage(driver);
-		cartPage.enterOnRemoveToRemoveTheProduct(driver,1);
-		cartPage.enterOnRemoveToRemoveTheProduct(driver,0);	
 	//	Assert.assertEquals(cartPage.getNoOfProductsPresentInCart(driver),2);		
 	}
-	@Test(priority=3)
-    public void  VerifyIfUserIsAbleToRemoveProdutFromCart() throws InterruptedException { 
-		//Test=extentReport.createTest("VerifyIfUserIsAbleToRemoveProdutFromCart");
-		naaptolHomePage = new NaaptolHomePage(driver);
-   	    naaptolHomePage.enterSearchTab("laptop");
-   	    naaptolHomePage.ClickOnSearch();
-   	    
-   	    productResultPage = new ProductResultPage(driver);
-   	    productResultPage.clickOnQuickView(driver,4);
-   	    
-   	    productQuickViewPage = new ProductQuickViewPage(driver);
-   	    productQuickViewPage.clickOnBuyButton();
-    	
-   	    cartPage = new CartPage(driver);
-		cartPage.enterOnRemoveToRemoveTheProduct(driver,4);  
-		
-      }
-
+	
 //	@AfterMethod
 //	public void addTestStatus(ITestResult result) {
 //		

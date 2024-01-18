@@ -3,6 +3,7 @@ package pom;
 import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -21,6 +22,7 @@ public class NaaptolHomePage {
     @FindBy (xpath = "//input[@id='header_search_text']")private WebElement searchTab;
     @FindBy (xpath = "(//div[@class='search'])[2]")      private WebElement search;    
     @FindBy (xpath = "//span[@id='header_search_shopping_cart_count']")private WebElement addToCart;
+    @FindBy (xpath= "//a[@id='cancelOrder']")private WebElement cancelOrder;
     
     public NaaptolHomePage(WebDriver driver) {
       PageFactory.initElements(driver,this);
@@ -29,7 +31,7 @@ public class NaaptolHomePage {
     public void  clickOnLogin() {
     	logIn.click();
     }
-    public void clickOnTerackOrder() {
+    public void clickOnTrackOrder() {
     	trackOrder.click();
     }
     public void clickOnShoppingCategory() {
@@ -52,5 +54,10 @@ public class NaaptolHomePage {
     }
     public void clickOnAddToCart() {
     	addToCart.click();
+    }
+    public void clickOnCancelOrder(WebDriver driver) {
+    	cancelOrder.click();
+    	Alert a=driver.switchTo().alert();
+		a.accept();
     }
 }
